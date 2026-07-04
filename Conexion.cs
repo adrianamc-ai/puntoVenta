@@ -14,7 +14,7 @@ namespace puntoVenta
 
         public Conexion()
         {
-            cadena = "Server=localhost; Database=puntodb; Uid=root; Pwd=; Port=3306";
+            cadena = "Server=localhost; Database=puntodb; Uid=root; Pwd=; Port=3306; SslMode=none;";
         }
 
         public MySqlConnection getConection()
