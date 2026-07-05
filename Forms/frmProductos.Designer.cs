@@ -66,6 +66,7 @@ namespace Punto.Forms
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(400, 22);
             this.txtBusqueda.TabIndex = 0;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // dgvProductos
             // 
@@ -81,6 +82,7 @@ namespace Punto.Forms
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductos.Size = new System.Drawing.Size(860, 220);
             this.dgvProductos.TabIndex = 1;
+            this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
             // 
             // lblId
             // 
@@ -88,7 +90,7 @@ namespace Punto.Forms
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(100, 23);
             this.lblId.TabIndex = 0;
-            this.lblId.Text = "0";
+            this.lblId.Text = "Código";
             this.lblId.Visible = false;
             // 
             // txtCodigo
@@ -143,6 +145,7 @@ namespace Punto.Forms
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnEditar
             // 
@@ -157,6 +160,7 @@ namespace Punto.Forms
             this.btnEditar.TabIndex = 1;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
@@ -171,6 +175,7 @@ namespace Punto.Forms
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label1
             // 
@@ -270,6 +275,7 @@ namespace Punto.Forms
             this.Controls.Add(this.gbBotones);
             this.Name = "frmProductos";
             this.Text = "Gestión de Productos";
+            this.Load += new System.EventHandler(this.frmProductos_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.gbBusqueda.ResumeLayout(false);
             this.gbBusqueda.PerformLayout();
