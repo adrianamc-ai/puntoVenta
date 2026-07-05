@@ -13,7 +13,7 @@ namespace Punto.Forms
             InitializeComponent();
         }
 
-         //al cargar el formulario llena el DataGridView automáticamente
+         //al cargar el formulario llena el DataGridView 
         private void frmProductos_Load_1(object sender, EventArgs e)
         {
             CargarGridProductos();
